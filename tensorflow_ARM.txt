@@ -1,0 +1,30 @@
+Listed in this file are all the versions and configurations which were used to make pythonPiper function on an ARM processor.
+    This is for deployment on a Raspberry Pi (a 3B 1.2 in my case)
+
+Numpy - Version 1.16.2
+
+TensorFlow (v2.0.0)-
+    Required Dependencies: (may be installed with apt-get) 
+        1) libhdf5-dev 
+        2) libc-ares-dev 
+        3) libeigen3-dev
+        4) openmpi-bin 
+        5) libopenmpi-dev
+        6) libatlas-base-dev
+    
+    Required python Dependencies: (may be installed with pip3)
+        1) keras_applications==1.0.8
+        2) keras_preprocessing==1.1.0
+        3) h5py==2.9.0
+
+    note: you may also require "pip3 install -U six wheel mock"
+
+    TensorFlow Wheel (wget): https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.0.0/tensorflow-2.0.0-cp37-none-linux_armv7l.whl
+
+    install the wheel with: "pip3 install tensorflow-2.0.0-cp37-none-linux_armv7l.whl"
+
+
+to quickly check the install, open a python interpreter and run the following commands:
+    "import tensorflow"
+    "tensorflow.__version__"
+    output should be "2.0.0" with no warnings or errors
